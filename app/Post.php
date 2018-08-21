@@ -12,6 +12,10 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function user(){
+        return $this->hasMany(User::class);
+    }
+
     public function addComment($body){
         $this->comments()->create(compact('body'));
     }
