@@ -8,6 +8,7 @@
     <hr>
     <div class="comments">
         <ul class="list-group">
+        @if(count($post))
             @foreach($post->comments as $comment)
             <li class="list-group-item">
             <strong>
@@ -16,6 +17,7 @@
                 {{$comment->body}}
             </li>
             @endforeach
+            @endif
         </ul>
     </div>
 
